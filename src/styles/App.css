@@ -147,7 +147,6 @@ input[type=number] {
     border-radius: 15px;
     border: 1px solid;
     box-shadow: 0px 0px 30px rgb(230, 232, 233);
-    background-color: blue;
 }
 
 .calculateur-activity {
@@ -157,7 +156,6 @@ input[type=number] {
     flex-direction: column;
     padding: 30px;
     margin: 20px;
-    /* background-color: red; */
 }
 
 .activity-list {
