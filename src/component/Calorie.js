@@ -158,7 +158,7 @@ function Calorie() {
                             <div className={"btn" + (activity === '1' ? ' active-btn ' : "")} onClick={() => {
                                 setActivity('1')
                             }}> Peu actif</div>
-                            <p>Assis la plupart du temps (par ex : travail de bureau)</p>
+                            <p>Assis la plupart du temps <span>(par ex : travail de bureau)</span></p>
                         </div>
 
                         <div className="wrapper-activity">
@@ -166,7 +166,7 @@ function Calorie() {
                             <div className={"btn" + (activity === '2' ? ' active-btn ' : "")} onClick={() => {
                                 setActivity('2')
                             }}>Moyennement actif</div>
-                            <p>Debout la plupart du temps (par ex : professeur, caissier)</p>
+                            <p>Debout la plupart du temps <span>(par ex : professeur, caissier)</span></p>
                         </div>
 
                         <div className="wrapper-activity">
@@ -174,7 +174,7 @@ function Calorie() {
                             <div className={"btn" + (activity === '3' ? ' active-btn ' : "")} onClick={() => {
                                 setActivity('3')
                             }}>Actif</div>
-                            <p>Marche la plupart du temps (par ex : serveur, vendeur)</p>
+                            <p>Marche la plupart du temps <span>(par ex : serveur, vendeur)</span></p>
                         </div>
 
                         <div className="wrapper-activity">
@@ -182,7 +182,7 @@ function Calorie() {
                             <div className={"btn" + (activity === '4' ? ' active-btn ' : "")} onClick={() => {
                                 setActivity('4')
                             }}>Très actif</div>
-                            <p>Activité très physique (par ex : ouvrier)</p>
+                            <p>Activité très physique <span>(par ex : ouvrier)</span></p>
                         </div>
 
                     </div>
