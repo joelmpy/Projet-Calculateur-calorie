@@ -27,16 +27,18 @@ function Calorie() {
         setWeight(event.target.value)
     }
 
-    console.log(age, heigt, weight, gender, activity)
-
-    
-
     // function button du resultat //
 
     const toggleFunction = (event) => {
         setFormValid(true)
         let totalCalories;
-        if (weight === "" || heigt === "" || 80 < age || age < 15) {
+        console.log(weight)
+        if(weight>0){
+            console.log('superieur')
+        }else{
+            console.log('infieurieur')
+        }
+        if (weight < 1 || heigt === "" || 80 < age || age < 15) {
             alert('Veuillez remplir tout les champs')
             setMessageError("Veuillez remplir ce champs svp pour le calcule")
         } else if (gender === 'homme' && activity === "1") {
@@ -65,9 +67,10 @@ function Calorie() {
         }    else if (gender === 'femme' && activity === "4"){
             totalCalories =  1.5 * (9.247 * weight + (3.098 * heigt) - (4.330 * age) + 447.593)
             setResult(totalCalories)
-        }else (
+        }
+        else {
             setResult()
-        )
+        }
 
         console.log(totalCalories)
     }
@@ -205,14 +208,14 @@ function Calorie() {
                 </div>
             </section>
             : null
-            }
+        }
+        <button onClick={toggleFunction}>Calculer apport calorique</button>
                 {
-                result === 0 ?   
-                <button onClick={toggleFunction}>Calculer apport calorique</button>
-                :
+                result !== 0 ?   
                 <div>
                 <button className="reload" onClick={reload}>Supprimer</button>
                 </div>   
+                :null
             }
         </div>
     );
